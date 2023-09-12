@@ -1,0 +1,82 @@
+!<arch>
+ft_isalpha.c/   0           0     0     644     128       `
+#include "libft.h"
+
+int	ft_isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
+}
+ft_isdigit.c/   0           0     0     644     100       `
+#include "libft.h"
+
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
+ft_isalnum.c/   0           0     0     644     154       `
+#include "libft.h"
+
+int	ft_isalnum(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+		return (1);
+	return (0);
+}
+ft_isascii.c/   0           0     0     644     98        `
+#include "libft.h"
+
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}
+ft_isprint.c/   0           0     0     644     99        `
+#include "libft.h"
+
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
+}
+
+ft_strlen.c/    0           0     0     644     110       `
+#include "libft.h"
+
+int ft_strlen(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+ft_memset.c/    0           0     0     644     311       `
+#include "libft.h"
+#include <stddef.h>
+
+void *ft_memset(void *str, int c, size_t n)
+{
+	size_t i;
+	//unsigned char *chstr;
+	//unsigned char x;
+
+	i = 0;
+	//str = (char*)str;
+	//chstr = (unsigned char*)str;
+	//x = c;
+	while (n > i)
+	{
+		//chstr[i] = x;
+		*(char*)str = c;
+		*str = *str + sizeof(char);
+		i++;
+	}
+}
+
